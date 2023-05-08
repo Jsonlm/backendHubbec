@@ -3,8 +3,8 @@
 ## Video explicativo https://youtu.be/dN0WFUl2WX0
 
 ## Comandos de inicio de proyecto
+    npm install
     npm start
-    ng serve - Esperar carga
 
 ## Tecnologías usadas
   >  NodeJS 14.8.1
