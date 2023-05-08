@@ -126,4 +126,22 @@ async function getUser(req, res, next) {
     next();
 }
 
+// Buscar usuario por correo
+async function getUser(req, res, next) {
+    let user;
+
+    try {
+        user = await User.findOne({email: req.body.user.email});
+
+        if (user == null) {
+            return res.status(404).json({ message: "Ususario no encontrado" });
+        }
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+
+    res.user = user;
+    next();
+}
+
 module.exports = router;
