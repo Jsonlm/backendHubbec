@@ -81,7 +81,7 @@ router.put('/upload/:id', async (req, res) => {
             console.error('Error al guardar la imagen', err);
             res.status(500).send('Error al guardar la imagen');
         } else {
-            //console.log(`Imagen guardada correctamente en ${filePath}`);
+            console.log(`Imagen guardada correctamente en ${filePath}`);
         }
     });
     
@@ -93,7 +93,7 @@ router.put('/upload/:id', async (req, res) => {
         });
         res.status(200).json('Imagen recibida y guardada correctamente');
     } catch (err) {
-        //console.error(err);
+        console.error(err);
         res.status(500).json({ message: 'Server error' });
     }
 });
